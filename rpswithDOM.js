@@ -59,12 +59,18 @@ function RockPaperScissorsGame(PlayerMove) {
     }
   }
 
+  const colourElement = document.querySelector('.background');
+
+
   if (result === "You win!") {
     score.wins = score.wins + 1;
+    colourElement.classList.add('colour-change-win');
   } else if (result === "You lose!") {
     score.losses = score.losses + 1;
+    colourElement.classList.add('colour-change-lose');
   } else if (result === "Tie!") {
     score.ties = score.ties + 1;
+    colourElement.classList.add('colour-change-tie');
   }
 
   localStorage.setItem("score", JSON.stringify(score));
@@ -81,4 +87,9 @@ function RockPaperScissorsGame(PlayerMove) {
     updateScore();
     
   console.log(score);
+  setTimeout( () => {
+    colourElement.classList.remove('colour-change-win');
+    colourElement.classList.remove('colour-change-lose');
+    colourElement.classList.remove('colour-change-tie');
+  },1000)
 }
