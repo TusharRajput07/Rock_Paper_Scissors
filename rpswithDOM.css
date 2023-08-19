@@ -103,3 +103,26 @@ body {
     background-color: #EBE76C;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .image-button{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+  }
+  .image-button:hover {
+    height: 55px;
+    width: 55px;
+    border-color: lightgrey;
+  }
+  .container {
+    height: 200px;
+  }
+  .title{
+    padding: 0px 15px 0px 15px;
+  }
+  .moves-image {
+    height: 70px;
+    width: 70px;
+  }
+}
